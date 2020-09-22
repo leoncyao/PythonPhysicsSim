@@ -56,7 +56,7 @@ def game():
     prev_time = 0
     while Running:
         Display.fill((0, 0, 0))
-        ctime = time.clock()
+        ctime = time.perf_counter()
         if ctime - prev_time > 0.01:
             prev_time = ctime
             for obj in objects:
